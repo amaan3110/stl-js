@@ -1,0 +1,44 @@
+{
+  "name": "@coderbaba/stl-js",
+  "version": "1.0.2",
+  "description": "STL data structures for JavaScript",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.iife.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "stl",
+    "data-structures",
+    "stack",
+    "queue",
+    "deque",
+    "priority-queue",
+    "heap",
+    "min-heap",
+    "max-heap",
+    "linkedlist",
+    "doubly-linkedlist",
+    "circular-linked-list",
+    "binary-tree",
+    "trie",
+    "graph",
+    "unordered-set",
+    "multiset",
+    "unordered-map",
+    "multimap",
+    "pair",
+    "custom-stl",
+    "typescript",
+    "javascript-stl"
+  ],
+  "author": "Mohd Amaan",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
