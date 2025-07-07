@@ -316,6 +316,69 @@ console.log(pair.toObject()); // { first: "Coder", second: "Baba" }
 
 ```js
 // Using npm (ESM/TypeScript)
+import { VectorPair } from "@coderbaba/stl-js";
+const vop = new VectorPair<string, string>();
+
+// Using CDN (Vanilla JS)
+<script src="https://unpkg.com/@coderbaba/stl-js/dist/index.global.js"></script>;
+const vop = new STL.VectorPair();
+
+// Methods available:
+
+// 1. push(first, second) - Adds a new pair to the end of the vector
+vop.push("TS", "JS");
+vop.push("Node", "React");
+
+// 2. pop() - Removes and returns the last pair
+const last = vop.pop();
+console.log(last?.toString()); // (Node, React)
+
+// 3. get(index) - Returns the pair at the given index
+const pair = vop.get(0);
+console.log(pair?.toString()); // (TS, JS)
+
+// 4. size() - Returns the number of pairs in the vector
+console.log(vop.size()); // 1
+
+// 5. isEmpty() - Checks if the vector is empty
+console.log(vop.isEmpty()); // false
+
+// 6. clear() - Clears all pairs from the vector
+vop.clear();
+console.log(vop.isEmpty()); // true
+
+// 7. toArray() - Converts all pairs to an array of [T, U]
+vop.push("A", "B");
+vop.push("X", "Y");
+console.log(vop.toArray()); // [["A", "B"], ["X", "Y"]]
+
+// 8. toString() - Returns a string representation of all pairs
+console.log(vop.toString()); // [(A, B), (X, Y)]
+
+// 9. findByFirst(value) - Finds the first pair with a matching first value
+const foundFirst = vop.findByFirst("A");
+console.log(foundFirst?.toString()); // (A, B)
+
+// 10. findBySecond(value) - Finds the first pair with a matching second value
+const foundSecond = vop.findBySecond("Y");
+console.log(foundSecond?.toString()); // (X, Y)
+
+// 11. forEach(callback) - Iterates over each pair
+vop.forEach((pair, index) => {
+  console.log(index, pair.toString());
+});
+
+// 12. sortByFirst(compareFn?) - Sorts the vector by the first value
+vop.sortByFirst(); // Uses default < if available
+vop.sortByFirst((a, b) => a.localeCompare(b)); // Custom string comparison
+
+// 13. sortBySecond(compareFn?) - Sorts the vector by the second value
+vop.sortBySecond(); // Uses default < if available
+vop.sortBySecond((a, b) => a.localeCompare(b)); // Custom string comparison
+```
+
+```js
+// Using npm (ESM/TypeScript)
 import { MinHeap } from "@coderbaba/stl-js";
 const heap = new MinHeap<number>();
 
