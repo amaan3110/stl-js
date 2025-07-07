@@ -31,6 +31,7 @@
     "unordered-map",
     "multimap",
     "pair",
+    "vector-pair",
     "custom-stl",
     "typescript",
     "javascript-stl"
